@@ -89,7 +89,8 @@
             color: #ffffff;
             font-size: 16px;
             font-weight: 600;
-            text-decoration: none;
+            border: none;
+            cursor: pointer;
             border-radius: 50px;
             transition: transform 0.2s ease;
             box-shadow: 0 4px 25px rgba(255, 64, 129, 0.4);
@@ -115,10 +116,18 @@
         <div class="handle">@sophiarreedd</div>
         <p>Tap below to unlock my premium daily feed and message me directly 💖</p>
         
-        <a href="https://www.fanvue.com/sophiarreedd" target="_blank" rel="noopener noreferrer" class="btn-main">
+        <button data-gate="aHR0cHM6Ly93d3cuZmFudnVlLmNvbS9zb3BoaWFycmVlZGQ=" onclick="unlock(this)" class="btn-main">
             🔒 Access Premium Feed
-        </a>
+        </button>
     </div>
+
+    <script>
+        function unlock(element) {
+            var encoded = element.getAttribute('data-gate');
+            var decoded = atob(encoded);
+            window.open(decoded, '_blank', 'noopener,noreferrer');
+        }
+    </script>
 
 </body>
 </html>
