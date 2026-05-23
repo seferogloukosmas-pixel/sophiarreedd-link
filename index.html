@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sophia Reed</title>
+    <title>Sophia</title>
     <style>
         * {
             box-sizing: border-box;
@@ -11,7 +11,7 @@
             padding: 0;
         }
         body {
-            background-color: #0d080b;
+            background-color: #0b090a;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             justify-content: center;
@@ -21,6 +21,7 @@
             overflow-x: hidden;
             position: relative;
         }
+
         .background-model {
             position: absolute;
             top: 0;
@@ -29,80 +30,91 @@
             width: 100%;
             max-width: 500px;
             height: 65vh;
-            background: url("https://iili.io/CHndWga.png") top center / cover no-repeat;
+            background: url("https://iili.io/C9yUKFe.md.png") top center / cover no-repeat;
             z-index: 1;
             -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-            opacity: 0.75;
+            opacity: 0.65;
         }
+
         .bg-glow {
             position: absolute;
             top: 40vh;
             width: 300px;
             height: 300px;
-            background: #d4af37;
+            background: #ba181b;
             filter: blur(130px);
-            opacity: 0.2;
+            opacity: 0.25;
             z-index: 2;
         }
+
         .container {
             position: relative;
             z-index: 3;
             text-align: center;
             max-width: 360px;
-            width: 100%;
-            margin-top: 30vh;
-            background: rgba(13, 8, 11, 0.65);
-            padding: 35px 25px;
+            width: 90%;
+            margin-top: 35vh;
+            background: rgba(11, 9, 10, 0.7);
+            padding: 30px 20px;
             border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
         }
+        
         h1 {
-            font-size: 25px;
+            font-size: 24px;
             font-weight: 700;
             margin-bottom: 6px;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
         .handle {
             font-size: 14px;
-            color: #ffb3d1;
+            color: #e5383b;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             text-transform: lowercase;
             letter-spacing: 0.5px;
         }
-        p {
-            font-size: 14px;
-            color: #e2e8f0;
-            margin-bottom: 30px;
-            line-height: 1.5;
+        
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
         }
-        .btn-main {
+
+        .btn-link {
             display: block;
             width: 100%;
-            padding: 16px 20px;
-            background: linear-gradient(90deg, #ff4081, #9c27b0);
+            padding: 15px 20px;
             color: #ffffff;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
-            border: none;
-            cursor: pointer;
+            text-decoration: none;
             border-radius: 50px;
-            transition: transform 0.2s ease;
-            box-shadow: 0 4px 25px rgba(255, 64, 129, 0.4);
-            animation: pulse 2.5s infinite;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            transition: all 0.2s ease;
+            cursor: pointer;
         }
-        .btn-main:active {
+        .btn-link:active {
             transform: scale(0.98);
         }
+
+        /* Το αληθινό κουμπί που αναβοσβήνει */
+        .btn-main {
+            background: linear-gradient(90deg, #e5383b, #a61c1e);
+            border: none;
+            box-shadow: 0 4px 20px rgba(229, 56, 59, 0.4);
+            animation: pulse 3s infinite;
+        }
+
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(255, 64, 129, 0.5); }
-            70% { box-shadow: 0 0 0 15px rgba(255, 64, 129, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 64, 129, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(229, 56, 59, 0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(229, 56, 59, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(229, 56, 59, 0); }
         }
     </style>
 </head>
@@ -112,17 +124,26 @@
     <div class="bg-glow"></div>
 
     <div class="container">
-        <h1>Sophia Reed</h1>
+        <h1>Sophia</h1>
         <div class="handle">@sophiarreedd</div>
-        <p>Tap below to unlock my premium daily feed and message me directly 💖</p>
         
-        <button data-gate="aHR0cHM6Ly93d3cuZmFudnVlLmNvbS9zb3BoaWFycmVlZGQ=" onclick="unlock(this)" class="btn-main">
-            🔒 Access Premium Feed
-        </button>
+        <div class="links-wrapper">
+            <button data-gate="aHR0cHM6Ly93d3cuZmFudnVlLmNvbS9zb3BoaWFycmVlZGQ=" onclick="gate(this)" class="btn-link btn-main">
+                Behind The Scenes ❤️
+            </button>
+
+            <a href="#" onclick="return false;" class="btn-link">
+                Business Inquiries
+            </a>
+
+            <a href="#" onclick="return false;" class="btn-link">
+                Official Merchandise
+            </a>
+        </div>
     </div>
 
     <script>
-        function unlock(element) {
+        function gate(element) {
             var encoded = element.getAttribute('data-gate');
             var decoded = atob(encoded);
             window.open(decoded, '_blank', 'noopener,noreferrer');
